@@ -96,9 +96,40 @@ function myName(){
 let firstName =myName()  //valuable let, sign a value 
 // console.log(firstName)
 
-// document.querySelector(".container h1").innerHTML += " "+ firstName
+// document.querySelector(".container h1").innerHTML += " " + firstName
 
 function changeBg(bgColor){
     document.querySelector("body").style.backgroundColor =bgColor
     //to test this function go to the console and type changeBg("cyan")
 }
+
+function textResize(newFontSize) {
+    document.querySelector('html').style.fontSize = newFontSize
+}
+//testResize("12px")空格
+
+//Calculator 
+function calculator(a,b,operator){
+    let result
+    switch(operator){
+        case "add":
+            result =a+b
+            break
+        case "sub":
+            result =a-b
+            break
+        case "multi":
+            result =a*b
+            break
+        case "div":
+            result =a/b
+            break
+        default:
+            result="I do not understand"
+    }
+    return result
+}
+
+console.log(calculator(34,56,"multi"))
+console.log(calculator(988,57.87,"sub"))
+console.log(calculator(34,56,"multiply"))
